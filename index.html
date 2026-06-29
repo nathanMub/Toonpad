@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToonPad | Premium Desk Gear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+</head>
+<body class="bg-[#0A0A0A] text-white font-sans">
+
+    <nav class="flex justify-between items-center py-8 px-6 max-w-6xl mx-auto border-b border-[#1A1A1A]">
+        <h1 class="text-2xl font-bold tracking-tighter">TOONPAD</h1>
+    </nav>
+
+    <header class="py-20 px-6 text-center">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-6">Precision Desk Surfaces</h2>
+        <p class="text-gray-400 max-w-lg mx-auto">Professional-grade XL pads. Built for performance.</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-[#141414] p-6 rounded-2xl border border-[#222]">
+            <div class="h-48 bg-[#1A1A1A] rounded-lg mb-6 flex items-center justify-center text-gray-700">Image Area</div>
+            <h3 class="text-lg font-bold mb-1">Cinema Night</h3>
+            <p class="text-[#FF6B35] font-bold mb-6">R429.00</p>
+            <div id="paypal-button-container-1"></div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize PayPal
+        paypal.Buttons({
+            createOrder: (data, actions) => {
+                return actions.order.create({
+                    purchase_units: [{ amount: { value: '429.00' } }]
+                });
+            },
+            onApprove: (data, actions) => {
+                return actions.order.capture().then(() => alert('Payment Successful!'));
+            }
+        }).render('#paypal-button-container-1');
+    </script>
+</body>
+</html>

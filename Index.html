@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToonPad | Nostalgic XL Mouse Pads</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Lilita+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --orange: #FF6B35;
+            --yellow: #FFC107;
+            --blue: #2196F3;
+            --green: #4CAF50;
+            --dark: #1A1A1A;
+            --light: #F5F5F5;
+            --shadow: 4px 4px 0px var(--dark);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Fredoka', sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Lilita One', cursive; }
+
+        /* Helpers */
+        .btn { padding: 12px 24px; border: 3px solid var(--dark); border-radius: 12px; font-weight: bold; cursor: pointer; transition: transform 0.1s; }
+        .btn:active { transform: translate(2px, 2px); }
+        .badge { display: inline-block; padding: 4px 12px; border: 3px solid var(--dark); border-radius: 20px; font-family: 'Lilita One'; margin-bottom: 1rem; }
+
+        /* Header */
+        header { position: sticky; top: 0; background: var(--light); padding: 1rem; display: flex; justify-content: space-between; align-items: center; z-index: 100; border-bottom: 3px solid var(--dark); }
+        .logo-box { width: 40px; height: 40px; background: var(--orange); border: 3px solid var(--dark); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Lilita One'; font-size: 20px; color: white; }
+        .nav-btns { display: flex; gap: 10px; }
+        .nav-btn { width: 40px; height: 40px; background: var(--orange); border: 3px solid var(--dark); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+
+        /* Hero */
+        .hero { min-height: 100vh; background: linear-gradient(to bottom, #FF6B35, #8B4F8B, #1A1A1A); padding: 4rem 1rem; text-align: center; color: white; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .hero h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; -webkit-text-stroke: 4px var(--dark); }
+        .hero h1 span { color: var(--yellow); -webkit-text-stroke: 4px var(--dark); }
+        .cta-btn { background: var(--orange); color: white; box-shadow: var(--shadow); border: 3px solid var(--dark); margin: 2rem 0; font-size: 1.2rem; }
+        
+        .wave { position: absolute; bottom: 0; width: 100%; height: 50px; background: white; clip-path: polygon(0 40%, 10% 20%, 25% 40%, 40% 20%, 60% 40%, 80% 10%, 100% 40%, 100% 100%, 0 100%); }
+
+        /* Collection */
+        .collection { padding: 4rem 1rem; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 2rem; }
+        .card { background: white; border: 3px solid var(--dark); border-radius: 16px; padding: 1rem; box-shadow: 4px 4px 0px var(--orange); }
+        .card img { width: 100%; height: 200px; object-fit: cover; border: 3px solid var(--dark); border-radius: 12px; margin-bottom: 1rem; }
+        .price { background: var(--yellow); border: 3px solid var(--dark); padding: 4px 12px; border-radius: 8px; font-family: 'Lilita One'; position: absolute; top: 10px; right: 10px; }
+        .product-img-wrap { position: relative; }
+
+        /* Features */
+        .features { background: var(--dark); color: white; padding: 4rem 1rem; }
+        .feat-card { background: #2A2A2A; border: 2px solid #444; padding: 1.5rem; border-radius: 16px; margin-bottom: 1rem; }
+        .icon-box { width: 50px; height: 50px; border-radius: 12px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 24px; border: 3px solid var(--dark); }
+
+        /* Footer */
+        footer { background: #0A0A0A; color: white; padding: 4rem 1rem; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="display:flex; align-items:center; gap:10px">
+            <div class="logo-box">T</div>
+            <h2 style="margin:0">ToonPad</h2>
+        </div>
+        <div class="nav-btns">
+            <div class="nav-btn">🛒</div>
+            <div class="nav-btn" style="background:var(--yellow)">☰</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="badge" style="background:var(--yellow)">Premium XL Mouse Pads ✨</div>
+        <h1>The Mouse Pads <br> <span>You Always Wanted</span></h1>
+        <p>Relive your favorite cartoon worlds, right on your desk. Premium XL mouse pads with nostalgic, adventure-filled art.</p>
+        <button class="btn cta-btn">Browse the Collection</button>
+        <div class="wave"></div>
+    </section>
+
+    <section class="collection">
+        <div class="badge" style="background:var(--blue)">🎮 The Collection</div>
+        <h2>Choose Your Adventure</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="product-img-wrap">
+                    <img src="https://picsum.photos/400/200?random=1" alt="Pad">
+                    <div class="price">R399</div>
+                </div>
+                <h3>Elmore Chaos</h3>
+                <p style="color:#666; font-size: 0.9rem;">900×400mm · XL Desk Pad</p>
+                <button class="btn" style="width:100%; background:var(--orange); color:white; margin-top:1rem" onclick="console.log('Added Elmore Chaos')">Add to Cart 🛒</button>
+            </div>
+            <div class="card">
+                <div class="product-img-wrap">
+                    <img src="https://picsum.photos/400/200?random=2" alt="Pad">
+                    <div class="price">R349</div>
+                </div>
+                <h3>Pingu Stare</h3>
+                <p style="color:#666; font-size: 0.9rem;">900×400mm · XL Desk Pad</p>
+                <button class="btn" style="width:100%; background:var(--orange); color:white; margin-top:1rem" onclick="console.log('Added Pingu Stare')">Add to Cart 🛒</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="badge" style="background:var(--green)">⚡ Built Different</div>
+        <h2>Why ToonPad?</h2>
+        <div class="feat-card">
+            <div class="icon-box" style="background:var(--blue)">📏</div>
+            <h3>XL & Smooth</h3>
+            <p>900×400mm stitched edges for max mouse room. Your entire desk, covered.</p>
+        </div>
+        <div class="feat-card">
+            <div class="icon-box" style="background:var(--orange)">🎨</div>
+            <h3>Vivid Prints</h3>
+            <p>Fade-proof, nostalgic art that pops. Colors that stay as bold as day one.</p>
+        </div>
+    </section>
+
+    <section style="background:var(--yellow); padding: 3rem 1rem; text-align: center;">
+        <h2>Ready Player One?</h2>
+        <p>Join the Toon Squad for new drops & 10% off your first order.</p>
+        <input type="email" placeholder="your@email.com" style="width:100%; padding:15px; border-radius:12px; border:3px solid var(--dark); margin: 1rem 0;">
+        <button class="btn" style="width:100%; background:var(--dark); color:white;">Join Now ✉️</button>
+    </section>
+
+    <footer>
+        <div class="logo-box" style="margin: 0 auto 1rem;">T</div>
+        <p style="color:#666">Premium XL mouse pads with nostalgic cartoon art. Made for gamers and dreamers.</p>
+        <p style="margin-top:2rem; font-size:0.8rem">© 2026 ToonPad - Shipping across South Africa</p>
+    </footer>
+
+</body>
+</html>
